@@ -36,7 +36,29 @@ truffle test
 
 ### Deploy
 
-
 This project is setup to deploy to either a local blockchain instance (Ganache) or the Infura.io provided blockchain.  Please update truffle.js with the proper credentials.
 
+### Demo
 
+#### On-chain
+
+This contract has already been deployed to address *0x59729917Abf791f76642cdEeB55735C21Db45B45* on [ropsten](https://ropsten.etherscan.io/address/0x59729917abf791f76642cdeeb55735c21db45b45)  You can test the contract functionality by sending eth
+to this address.  I'd recommend using [Metamask](https://metamask.io/) to send eth.  Please note, to become the new owner of the contract, more eth than the current price needs to be sen
+
+You can also call the **getOwner()** function directly using web3 or any other Ethereum smart contract framework.
+
+#### Off-chain
+
+Also included is a simple node app that implements an event-listener and a REST API which calls the **getOwner()** function and **getPastEvents()** function.
+
+To run the app:
+
+```
+npm install
+```
+
+Then you can run the app:
+
+```
+node app/server.js
+```
